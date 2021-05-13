@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./tailwind.css">
+    <link rel="shortcut icon" href="https://emi-school.ru/local/templates/emischool/favicon.ico" type="image/x-icon">
+    <title>Emi</title>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+</head>
+<body class="flex flex-col">
+    <header class="flex flex-col">
+        <nav class="flex flex-col items-center justify-between w-full h-24 bg-white border-b border-gray-500 lg:bg-transparent">
+            <div class="flex h-1/2">
+                <a href="#" class="h-full">
+                    <img src="https://emi-school.ru/local/templates/emischool/favicon.ico" alt="logo" class="h-full">
+                </a>
+            </div>
+            <div class="flex items-center justify-center flex-1 w-full">
+                <ul class="flex justify-between w-1/2 text-lg">
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white" href="#">Link</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="flex flex-col-reverse items-center justify-center flex-1 text-white 2xl:mb-40 lg:mb-0 2xl:justify-start">
+            <div class="flex flex-col items-center w-4/5 space-y-5 text-center xl:text-left xl:items-start xl:ml-1/6 2xl:pr-96 xl:pr-44">
+                <h1 class="text-5xl">Emi</h1>
+                <p class="text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi atque optio a eveniet aliquam laboriosam iste possimus culpa quos suscipit quas, blanditiis unde ratione cum dolore sunt, sint neque. Adipisci.</p>
+                <div class="flex">
+                    <a href="#" class="px-3 py-1 text-lg text-black duration-500 bg-white rounded-3xl hover:bg-gray-700 hover:text-white">Присоединяйтесь к нам</a>
+                </div>
+            </div>
+        </div>        
+    </header>
+    <main class="flex flex-col ">
+
+        
+        <div class="relative z-10 flex flex-col w-4/5 mx-auto bg-white shadow-xl rounded-2xl search-field xl:w-3/5">
+            <div class="flex items-center justify-center p-2 text-center h-1/2">
+                <span class="text-lg md:text-3xl">Узнайте больше об Emi</span>
+            </div>
+            <div class="flex justify-between border-t sm:space-x-5 h-1/2">
+                <input class="flex w-full px-5 py-3 sm:text-lg sm:flex-1 focus:outline-none " type="text" name="search" id="searchField" placeholder="Определите ваш поиск...">
+                <div class="items-center hidden sm:flex">
+                    <button class="items-center justify-center hidden focus:outline-none clear-field">
+                        <i class="text-2xl text-red-400 cursor-pointer hover:text-red-500 fas fa-times"></i>
+                    </button>
+                </div>
+                <button class="flex items-center justify-center w-16 text-xl lg:w-64 search-button focus:outline-none">
+                    <span class="hidden lg:flex">Поиск</span>
+                    <i class="lg:hidden fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+
+
+        <section>
+            <div class="flex flex-col items-center mt-16 space-x-10 xl:px-0 lg:flex-row space-y-14 group-info-container">
+                <div class="flex flex-col w-11/12 text-center lg:text-left lg:w-1/4 pr-7">
+                    <p class="font-medium ">Группа</p>
+                    <h2 class="mt-4 text-4xl font-semibold">Emi</h2>
+                    <span class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis odit necessitatibus laboriosam natus aut? Quos, excepturi blanditiis nostrum temporibus optio ipsam itaque perspiciatis quasi laudantium dicta incidunt perferendis ex soluta!</span>
+                </div>
+                <div class="flex w-11/12 space-x-5 overflow-x-auto border flex-nowrap cards-slider ">
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <div class="flex flex-col w-full text-center bg-white h-36 rounded-b-2xl">
+                            <small class="px-3 py-2 text-sm text-gray-400">Деятельность группы</small>
+                            <span class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam.</span> 
+                        </div>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <div class="flex flex-col w-full bg-white h-36 rounded-b-2xl">
+                            <small class="px-3 py-2 text-sm text-gray-400">Деятельность группы</small>
+                            <span class="text-black ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam.</span> 
+                        </div>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section>
+            <div class="flex items-center justify-center mt-16 ">
+                <div class="flex flex-col items-center w-11/12 space-y-16 text-center xl:w-7/12 md:space-x-16 md:space-y-0 md:text-left md:flex-row md:items-start ">
+                    <div class="flex md:w-1/2">
+                        <p class="text-3xl font-medium ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum minima quod voluptatem optio magnam deleniti totam nesciunt voluptatum aspernatur officia iste nobis, tempore laboriosam deserunt corrupti, earum, quo soluta consectetur porro adipisci beatae quibusdam ea illum! Maxime, id suscipit?</p>
+                    </div>
+                    <div class="flex flex-col space-y-10 md:w-1/2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ullam minima veritatis nam nihil est rem. Architecto nam nesciunt distinctio voluptates ea cumque reprehenderit ut eaque, quia possimus, dolorem sit!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ullam minima veritatis nam nihil est rem. Architecto nam nesciunt distinctio voluptates ea cumque reprehenderit ut eaque, quia possimus, dolorem sit!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ullam minima veritatis nam nihil est rem. Architecto nam nesciunt distinctio voluptates ea cumque reprehenderit ut eaque, quia possimus, dolorem sit!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section>
+            <div class="flex flex-col items-center mt-16 space-x-10 xl:px-0 lg:flex-row space-y-14 group-info-container">
+                <div class="flex flex-col w-11/12 text-center lg:text-left lg:w-1/4 pr-7">
+                    <p class="font-medium ">Узнать больше</p>
+                    <h2 class="mt-4 text-4xl font-semibold">Наши истории красоты</h2>
+                    <span class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis odit necessitatibus laboriosam natus aut? Quos, excepturi blanditiis nostrum temporibus optio ipsam itaque perspiciatis quasi laudantium dicta incidunt perferendis ex soluta!</span>
+                </div>
+                <div class="flex w-11/12 space-x-5 overflow-x-auto border flex-nowrap cards-slider ">
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <div class="flex flex-col w-full text-center bg-white h-36 rounded-b-2xl">
+                            <small class="px-3 py-2 text-sm text-gray-400">Деятельность группы</small>
+                            <span class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam.</span> 
+                        </div>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <div class="flex flex-col w-full bg-white h-36 rounded-b-2xl">
+                            <small class="px-3 py-2 text-sm text-gray-400">Деятельность группы</small>
+                            <span class="text-black ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam.</span> 
+                        </div>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+
+
+        
+        <section >
+            <div class="flex justify-center">
+                <div class="flex flex-col mt-40 lg:space-x-7 lg:flex-row ">
+                    <div class="statistic-container">
+                        <span class="font-medium text-7xl">1234</span>
+                        <span class="text-lg font-medium mt-11">начало деятельности Emi в России</span>
+                    </div>
+                    <div class="statistic-container">
+                        <span class="font-medium text-7xl">95<span class="text-4xl">%</span></span>
+                        <span class="text-lg font-medium mt-11">производственных стоков завода возвращается в производство после очистки на локальных очистных сооружениях</span>
+                        <span class="font-medium text-7xl mt-11">100<span class="text-4xl">%</span></span>
+                        <span class="text-lg font-medium mt-11">сотрудников имеют возможность обучаться</span>
+                    </div>
+                    <div class="statistic-container">
+                        <span class="font-medium text-7xl">54<span class="text-4xl">%</span></span>
+                        <span class="text-lg font-medium mt-11">продуктов L’Oréal, которые продаются в России и СНГ, производятся на российском заводе</span>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+
+
+        <section>
+            <div class="flex w-5/6 mt-40 xl:ml-1/6 ">
+                <div class="flex flex-col w-1/4 pr-7 ">
+                    <p class="font-medium ">Откройте для себя</p>
+                    <h2 class="mt-4 text-4xl font-semibold">Наши новости</h2>
+                    <ul class="flex flex-col mt-16 space-y-2">
+                        <li class="ml-6 text-lg cursor-pointer filter-item hover:text-black filter-item-active">Всё</li>
+                        <li class="ml-6 text-lg cursor-pointer filter-item hover:text-black ">Деятельность группы</li>
+                        <li class="ml-6 text-lg cursor-pointer filter-item hover:text-black ">Обязательства</li>
+                        <li class="ml-6 text-lg cursor-pointer filter-item hover:text-black ">Наука-технология</li>
+                        <li class="ml-6 text-lg cursor-pointer filter-item hover:text-black ">Бренды</li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap justify-between w-3/4">
+                    <div class="card card-group-section"><h3>Lorem ipsum dolor sit amet.</h3></div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <div class="flex flex-col w-full bg-white h-36 rounded-b-2xl">
+                            <small class="px-3 py-2 text-sm text-gray-400">Деятельность группы</small>
+                            <span class="text-black ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam.</span> 
+                        </div>
+                    </div>
+                    <div class="card card-group-section">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="card card-group-section">
+                        <div class="flex flex-col w-full bg-white h-36 rounded-b-2xl">
+                            <small class="px-3 py-2 text-sm text-gray-400">Деятельность группы</small>
+                            <span class="text-black ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam.</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="flex justify-center ">
+            <div class="flex w-3/5 mt-40 ">
+                <div class="flex flex-1">
+                    <span class="text-4xl font-medium ">Контакты</span>
+                </div>
+                <div class="flex flex-col flex-1">
+                    <span class="text-lg font-medium">Главный Офис Emi</span>
+                    <span class="mt-4">Адрес: <br>
+                        119180, Москва, 4-Й Голутвинский Переулок, Д. 1/8, Стр. 1-2 <br>
+                        Телефон: <br>
+                        +7 (495) 258 31 91
+                    </span>
+                    <span class="mt-4">Контакт Для Прессы: <a href="mailto:Pr_russia@loreal.com" class="text-blue-400 hover:underline">Pr_russia@loreal.com</a></span>
+                    <span class="mt-4">Контакт Для Потенциальных Поставщиков: <br>
+                    <a href="mailto:CORPRU.PurchasingRussia@loreal.com" class="text-blue-400 hover:underline">CORPRU.PurchasingRussia@loreal.com</a></span>
+                    <span class="mt-4">Вопросы По Трудоустройству И Карьере: <br>
+                        ВКонтакте Loreal_talent <br>
+                        Facebook LorealRussia
+                    </span>    
+                    <span class="mt-4">Остальные Вопросы <br>
+                        <a href="mailto:Loreal.Russia@loreal.com" class="text-blue-400 hover:underline">Loreal.Russia@loreal.com</a>
+                    </span>    
+                    <span class="mt-4 font-medium">Завод L'ORÉAL</span>
+                    <span>Адрес: <br>
+                        249020, Калужская Область, Боровский Район, Деревня Добрино, 2-Ой Восточный Проезд, Владение 4 <br>
+                        Телефон: +7 (495) 258 31 91   
+                    </span>
+                    <span class="mt-4 font-medium">Обучающий Центр для парикмахеров, визажистов, медицинских сотрудников  «Академия L'ORÉAL» В Москве</span>
+                    <span>Адрес: <br>
+                        119049, Москва, Якиманский Переулок, 6 <br>
+                        Телефон: +7 (495) 258 31 32 
+                    </span>
+                    <span class="mt-4 font-medium">Обучающий Центр «Академия L'ORÉAL» В Санкт-Петербурге</span>
+                    <span>Адрес: <br>
+                        197022, Санкт-Петербург, Каменноостровский Пр., 64 <br>
+                        Телефон: +7 (812) 648-01-67, +7 (812) 648-01-68
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="flex justify-center mt-40">
+            <div class="flex w-3/4 border-t border-b">
+                <div class="flex flex-col flex-1">
+                    <div class="flex mt-8">
+                        <a href="#" class="">
+                            <img src="https://emi-school.ru/local/templates/emischool/favicon.ico" alt="logo" class="h-16 ">
+                        </a>
+                    </div>
+                    <div class="flex mt-8 mb-8">
+                        <ul class="space-y-4 text-lg">
+                            <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                            <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                            <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                            <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                            <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-1">
+                    <ul class="flex mt-32 ml-auto text-lg space-x-7">
+                        <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                        <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                        <li class="cursor-pointer hover:text-pink-200"><a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>  
+    </main>
+
+    <footer class="flex justify-center py-7">
+        <div class="flex items-center justify-between w-3/4">
+            <ul class="flex text-sm text-gray-400 space-x-7">
+                <li class="hover:text-black"><a href="#">Cookie settings</a></li>
+                <li class="hover:text-black"><a href="#">Term of use</a></li>
+                <li class="hover:text-black"><a href="#">Privacy Policy</a></li>
+                <li class="hover:text-black"><a href="#">Business Customer Privacy Policy</a></li>
+                <li>|</li>
+                <li class="hover:text-black"><a href="#">Accesibility assessment</a></li>
+            </ul>
+            <div class="flex space-x-3">
+                <a href="#" class="flex items-center justify-center text-2xl border rounded-full social-link-vk hover:text-white social-link w-11 h-11"><i class="fab fa-vk"></i></a>
+                <a href="#" class="flex items-center justify-center text-2xl rounded-full social-link-facebook hover:text-white social-link w-11 h-11"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="flex items-center justify-center text-2xl rounded-full social-link-instagram hover:text-white social-link w-11 h-11"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="flex items-center justify-center text-2xl rounded-full social-link-instagram hover:text-white social-link w-11 h-11"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="flex items-center justify-center text-2xl rounded-full social-link-odnoklassniki hover:text-white social-link w-11 h-11"><i class="fab fa-odnoklassniki"></i></a> 
+                <a href="#" class="flex items-center justify-center text-2xl rounded-full social-link-youtube hover:text-white social-link w-11 h-11"><i class="fab fa-youtube"></i></a> 
+            </div>
+        </div>
+    </footer>
+    
+    
+
+
+
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>

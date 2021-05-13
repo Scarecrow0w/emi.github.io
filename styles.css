@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (min-width: 1280px) {
+    .group-info-container {
+        margin-left: 10%;
+    }
+}
+
+section {
+    /* border: solid 1px green; */
+}
+
+header {
+    height: 800px;
+    background: url(https://www.loreal.com/-/media/project/loreal/brand-sites/corp/master/lcorp/7-local-country-folder/russia/russie-hero-image-1920x800.jpg?cx=0.17&cy=0.63&cw=1920&ch=800&blr=False&hash=9B1F775B14FF5B2DBF936D013876AC6A) no-repeat center center;
+    background-size: cover;
+}
+
+nav {
+    transition: all ease 0.25s;
+}
+
+nav.fixed {
+    background: white !important;
+    z-index: 999;
+}
+
+nav.fixed a, nav a {
+    color: #3D3D3D;
+}
+
+nav:hover {
+    background-color: white;
+}
+
+nav:hover * {
+    color: #3D3D3D;
+
+}
+
+.cards-slider {
+    height: 480px;
+    /* scroll-snap-type: x mandatory; */
+    scroll-behavior: smooth;
+}
+
+/* полоса прокрутки (скроллбар) */
+body ::-webkit-scrollbar {
+    height: 6px; /* высота для горизонтального скролла */
+    width: 50%;
+    background-color: #D8D8D8;
+    border-radius: 9em;
+}
+
+/* ползунок скроллбара */
+body ::-webkit-scrollbar-thumb {
+    background-color: #3D3D3D;
+    border-radius: 9em;
+}
+
+/* полоса прокрутки и ползунок для Mozilla */
+body {
+    scrollbar-color: #3D3D3D #D8D8D8;
+    scrollbar-width: 6px;
+}
+
+.card {
+    transition: all ease 1s;
+    flex: 0 0 auto;
+    height: 400px;
+    width: 217px;
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    border-radius: 1rem;
+    background: url(https://www.loreal.com/-/media/project/loreal/brand-sites/corp/master/lcorp/2-group/about-loreal/strategy-and-model/l-oreal-who-we-are.jpg?cx=0.46&cy=0.37&cw=216&ch=400&blr=False&hash=8C54F07FEEB2659319F63B2F0D803003) no-repeat center center;
+    background-size: 110%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+
+}
+
+.card h3 {
+    margin-bottom: 63px;
+    font-weight: 700;
+}
+
+.statistic-container {
+    width: 309px;
+    height: 466px; 
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3D3D3D;
+    text-align: center;
+    justify-content: center;
+}
+
+.filter-item {
+    color: #646464;
+    transition: all ease 0.25s;
+}
+
+.filter-item-active, .filter-item:hover {
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    margin-left: 0 !important;
+}
+
+.social-link {
+    background: #DBD9D6;
+    color: #3D3D3D;
+}
+
+.social-link-vk:hover {
+    background: #2787F5;
+}
+
+.social-link-facebook:hover {
+    background: #4867AA;
+}
+
+.social-link-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-link-odnoklassniki:hover {
+    background: #F58220;
+}
+
+.social-link-youtube:hover {
+    background: #FE0000;
+}
+
+.search-field {
+    height: 140px;    
+    bottom: 70px;
+}
+
+#searchField {
+    border-bottom-left-radius: 1rem;
+}
+
+.search-button{
+    background: #CDC4BA;
+    border-bottom-right-radius: 1rem;
+    transition: all ease .25s;
+}
+
+.search-button:hover {
+    background: #4D4C4B;
+    color: white;
+}
+/* 
+.active {
+    background-size: cover;
+} */
