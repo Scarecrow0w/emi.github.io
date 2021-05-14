@@ -1,30 +1,52 @@
-let cards = document.querySelectorAll('.card');
+// let groupCards = document.querySelectorAll('.card-group-section'),
+// storiesCards = document.querySelectorAll('.card-stories-section'),
+// newsCards = document.querySelectorAll('.card-news-section');
 
+// const cards = [groupCards, storiesCards, newsCards]
+
+
+// for (j = 0; j < cards.length; j++) {
+
+//   cards[j].forEach((elem)=>{
+//     elem.addEventListener('mouseover', () => {
+//       elem.classList.add('active')
+      
+//       cards[0].forEach((item) => {
+//         if (!item.classList.contains('active')) item.classList.add('inactive')
+//       })
+  
+//       elem.addEventListener('mouseout', () => {
+//         cards[0].forEach((item) => {
+//           item.classList.remove('active')
+//           item.classList.remove('inactive')
+//         })
+//       }) 
+//     })  
+//   })
+// }
+
+const cards = document.querySelectorAll('.card')
 
 cards.forEach((elem)=>{
   elem.addEventListener('mouseover', () => {
-      elem.classList.toggle('active')
+    elem.classList.add('active')
+    
+    cards.forEach((item) => {
+      if (!item.classList.contains('active')) item.classList.add('inactive')
+    })
+
+    elem.addEventListener('mouseout', () => {
+      cards.forEach((item) => {
+        item.classList.remove('active')
+        item.classList.remove('inactive')
+      })
+    }) 
   })  
 })
 
-// cards.forEach((elem)=>{
-//     elem.addEventListener('mouseout', () => {
-//         elem.classList.remove('active')
-//     }) 
-//   })
-
-let filterItems = document.querySelectorAll('.filter-item');
 
 
-// filterItems.forEach((elem)=>{
-//   elem.addEventListener('mouseover', () => {
-//       elem.classList.toggle('filter-item-active')
-//   })  
 
-//   elem.addEventListener('mouseout', () => {
-//     elem.classList.remove('filter-item-active')
-// }) 
-// })
 
 // очистить поле поиска и отобразить/показать кнопку Х
 let clearButton = document.querySelector('.clear-field'),
@@ -44,5 +66,4 @@ window.addEventListener('scroll', () => {
   let navbar = document.querySelector('nav')
 
   navbar.classList.toggle('fixed', window.scrollY > 0)
-
 })
