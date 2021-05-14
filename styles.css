@@ -15,6 +15,13 @@
     
 }
 
+@media screen and (max-width: 640px) {
+    .card {
+        transform: scale(0.8);
+    }
+    
+}
+
 section {
     /* border: solid 1px green; */
 }
@@ -116,12 +123,12 @@ body {
 
 .filter-item {
     color: #646464;
-    transition: all ease 0.25s;
+    transition: all ease 0.15s;
 }
 
 .filter-item-active, .filter-item:hover {
     font-weight: 700;
-    font-size: 20px;
+    /* transform: scale(1.1); */
     color: black;
     margin-left: 0 !important;
 }
@@ -174,3 +181,4 @@ body {
 .inactive {
     filter: contrast(0.5);
 }
+
