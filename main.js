@@ -56,9 +56,9 @@ function navToggle() {
 }
 
 
-const links = {
+const links = [
   
-    Group: {
+    {
       name: 'Group',
       url: '#',
       title: {
@@ -185,7 +185,7 @@ const links = {
       ]
     },
   
-    Commitments: {
+    {
       name: 'Commitments',
       url: '#',
       title: {
@@ -312,7 +312,7 @@ const links = {
       ]
     },
   
-    Brands: {
+    {
       name: 'Brands',
       url: '#',
       title: {
@@ -451,7 +451,7 @@ const links = {
       ]
     },
   
-    Beauty: {
+  {
     name: 'Beauty Science & Technology',
     url: '#',
     title: {
@@ -576,14 +576,14 @@ const links = {
         }
         }
       ]
-    },
+  },
   
-    Careers: {
-    title: 'Careers',
+  {
+    name: 'Careers',
     url: '#'
-    }
+  }
   
-}
+]
 
 console.log(links);
 
@@ -595,8 +595,10 @@ let navlink = document.querySelectorAll('.nav-link'),
 submenu = document.querySelector('.submenu');
 
 // Показать подменю при наведении курсора на ссылку
-navlink.forEach((el) => {
+navlink.forEach((el, i) => {
   
+  el.textContent = links[i].name
+
 
   el.addEventListener('mouseover', () => {
     submenu.classList.remove('hidden')
