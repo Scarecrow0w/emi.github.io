@@ -14,7 +14,7 @@
 </head>
 <body class="flex flex-col">
     <header class="flex flex-col">
-        <nav class="flex flex-col items-center justify-between w-full h-24 bg-white border-b border-gray-500 lg:bg-transparent">
+        <!-- <nav class="flex flex-col items-center justify-between w-full h-24 bg-white border-b border-gray-500 lg:bg-transparent">
             <div class="flex h-1/2">
                 <a href="#" class="h-full">
                     <img src="https://emi-school.ru/local/templates/emischool/favicon.ico" alt="logo" class="h-full">
@@ -29,6 +29,82 @@
                     <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white" href="#">Link</a></li>
                 </ul>
             </div>
+        </nav> -->
+        <nav class="flex flex-col items-center justify-between w-full bg-white border-b border-gray-500 lg:min-h-24 lg:bg-transparent ">
+            <div class="flex flex-row flex-no-wrap items-center self-start justify-between w-full h-10 border lg:self-center lg:flex-none">
+                <ul class="flex space-x-3">
+                    <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
+                    <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
+                    <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
+                </ul>
+                <a href="#" class="h-full">
+                    <img src="https://emi-school.ru/local/templates/emischool/favicon.ico" alt="logo" class="h-full">
+                </a>
+                <div class="flex space-x-3">
+                    <select name="languageSelector" id="languageSelector" class="text-white bg-transparent focus:outline-none ">
+                        <option value="rus">Rus</option>
+                        <option value="eng">Eng</option>
+                    </select>
+                    <a href="#" class="hover:text-pink-300 lg:text-white">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+              <button id="menuBtn" class="block hamburger lg:hidden focus:outline-none" type="button" onclick="navToggle()">
+                <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
+              </button>
+            </div>
+            <div id="menu" class="flex-col items-center justify-center flex-1 hidden w-full border border-red-500 lg:flex">
+                <ul class="flex justify-between w-1/2 text-lg">
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
+                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
+                </ul>  
+                <div class="flex-col hidden w-full bg-white border border-yellow-400 h-96 lg:px-32 submenu">
+                    <a href="" class="text-4xl link-title hover:text-pink-300">link title ></a>
+                    <div class="flex w-full h-full space-x-10 border">
+                        <div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                            <hr class="w-full ">
+                            <ul class="flex flex-col space-y-2 text-2xl">
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                            <hr class="w-full ">
+                            <ul class="flex flex-col space-y-2 text-2xl">
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                            </ul>
+                        </div><div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                            <hr class="w-full ">
+                            <ul class="flex flex-col space-y-2 text-2xl">
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                            </ul>
+                        </div><div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                            <hr class="w-full ">
+                            <ul class="flex flex-col space-y-2 text-2xl">
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                <li><a href="" class="hover:text-pink-300">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>              
+            </div>                
         </nav>
         <div class="flex flex-col-reverse items-center justify-center flex-1 text-white 2xl:mb-40 lg:mb-0 2xl:justify-start">
             <div class="flex flex-col items-center w-4/5 space-y-5 text-center xl:text-left xl:items-start xl:ml-1/6 2xl:pr-96 xl:pr-44">
@@ -65,7 +141,7 @@
 
         <section>
             <div class="flex flex-col items-center mt-16 lg:space-x-10 lg:flex-row space-y-14 group-info-container">
-                <div class="flex flex-col w-11/12 text-center lg:pl-2 xl:pl-0 lg:text-left lg:w-1/4 pr-7">
+                <div class="flex flex-col w-11/12 text-center lg:pl-2 xl:pl-0 lg:text-left lg:w-1/4 lg:pr-7">
                     <p class="font-medium ">Группа</p>
                     <h2 class="mt-4 text-4xl font-semibold">Emi</h2>
                     <span class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis odit necessitatibus laboriosam natus aut? Quos, excepturi blanditiis nostrum temporibus optio ipsam itaque perspiciatis quasi laudantium dicta incidunt perferendis ex soluta!</span>
@@ -129,10 +205,10 @@
 
         <section>
             <div class="flex flex-col items-center mt-16 lg:space-x-10 lg:flex-row space-y-14 group-info-container">
-                <div class="flex flex-col w-11/12 text-center lg:pl-2 xl:pl-0 lg:text-left lg:w-1/4 pr-7">
+                <div class="flex flex-col w-11/12 text-center lg:pl-2 xl:pl-0 lg:text-left lg:w-1/4 lg:pr-7">
                     <p class="font-medium ">Узнать больше</p>
                     <h2 class="mt-4 text-4xl font-semibold">Наши истории красоты</h2>
-                    <span class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis odit necessitatibus laboriosam natus aut? Quos, excepturi blanditiis nostrum temporibus optio ipsam itaque perspiciatis quasi laudantium dicta incidunt perferendis ex soluta!</span>
+                    <span class="mt-5 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis odit necessitatibus laboriosam natus aut? Quos, excepturi blanditiis nostrum temporibus optio ipsam itaque perspiciatis quasi laudantium dicta incidunt perferendis ex soluta!</span>
                 </div>
                 <div class="flex w-11/12 space-x-5 overflow-x-auto flex-nowrap cards-slider ">
                     <div class="card card-stories-section">
@@ -200,12 +276,12 @@
                 <div class="flex flex-col w-11/12 text-center lg:pl-2 xl:pl-0 lg:text-left lg:w-1/4 ">
                     <p class="font-medium ">Откройте для себя</p>
                     <h2 class="mt-4 text-4xl font-semibold">Наши новости</h2>
-                    <ul class="flex flex-col justify-between w-full mt-10 md:flex-row lg:mt-16 lg:space-y-2 lg:flex-col lg:justify-start">
-                        <li class="text-lg cursor-pointer lg:ml-6 filter-item filter-item-active">Всё</li>
-                        <li class="text-lg cursor-pointer lg:ml-6 filter-item ">Деятельность группы</li>
-                        <li class="text-lg cursor-pointer lg:ml-6 filter-item ">Обязательства</li>
-                        <li class="text-lg cursor-pointer lg:ml-6 filter-item ">Наука-технология</li>
-                        <li class="text-lg cursor-pointer lg:ml-6 filter-item ">Бренды</li>
+                    <ul class="flex flex-col items-center w-full mt-10 md:flex-row lg:mt-16 lg:space-y-2 lg:flex-col lg:justify-start">
+                        <li class="w-auto text-lg cursor-pointer md:w-1/5 lg:ml-6 filter-item filter-item-active">Всё</li>
+                        <li class="w-auto text-lg cursor-pointer md:w-1/5 lg:ml-6 filter-item">Деятельность группы</li>
+                        <li class="w-auto text-lg cursor-pointer md:w-1/5 lg:ml-6 filter-item">Обязательства</li>
+                        <li class="w-auto text-lg cursor-pointer md:w-1/5 lg:ml-6 filter-item">Наука-технология</li>
+                        <li class="w-auto text-lg cursor-pointer md:w-1/5 lg:ml-6 filter-item">Бренды</li>
                     </ul>
                 </div>
                 <div class="flex w-11/12 space-x-5 overflow-x-auto flex-nowrap cards-slider ">
@@ -248,42 +324,44 @@
 
 
         <section>
-            <div class="flex flex-col px-5 mt-40 space-y-4 md:space-y-0 lg:w-3/5 md:flex-row">
-                <div class="flex flex-1">
-                    <span class="text-4xl font-medium ">Контакты</span>
-                </div>
-                <div class="flex flex-col flex-1 space-y-4 text-sm sm:text-base">
-                    <span class="text-lg font-medium">Главный Офис Emi</span>
-                    <span class="">Адрес: <br>
-                        119180, Москва, 4-Й Голутвинский Переулок, Д. 1/8, Стр. 1-2 <br>
-                        Телефон: <br>
-                        +7 (495) 258 31 91
-                    </span>
-                    <span class="">Контакт Для Прессы: <a href="mailto:Pr_russia@loreal.com" class="text-blue-400 hover:underline">Pr_russia@loreal.com</a></span>
-                    <span class="">Контакт Для Потенциальных Поставщиков: <br>
-                    <a href="mailto:CORPRU.PurchasingRussia@loreal.com" class="text-blue-400 hover:underline">CORPRU.PurchasingRussia@loreal.com</a></span>
-                    <span class="">Вопросы По Трудоустройству И Карьере: <br>
-                        ВКонтакте Loreal_talent <br>
-                        Facebook LorealRussia
-                    </span>    
-                    <span class="">Остальные Вопросы <br>
-                        <a href="mailto:Loreal.Russia@loreal.com" class="text-blue-400 hover:underline">Loreal.Russia@loreal.com</a>
-                    </span>    
-                    <span class="font-medium">Завод L'ORÉAL</span>
-                    <span>Адрес: <br>
-                        249020, Калужская Область, Боровский Район, Деревня Добрино, 2-Ой Восточный Проезд, Владение 4 <br>
-                        Телефон: +7 (495) 258 31 91   
-                    </span>
-                    <span class="font-medium">Обучающий Центр для парикмахеров, визажистов, медицинских сотрудников  «Академия L'ORÉAL» В Москве</span>
-                    <span>Адрес: <br>
-                        119049, Москва, Якиманский Переулок, 6 <br>
-                        Телефон: +7 (495) 258 31 32 
-                    </span>
-                    <span class="font-medium">Обучающий Центр «Академия L'ORÉAL» В Санкт-Петербурге</span>
-                    <span>Адрес: <br>
-                        197022, Санкт-Петербург, Каменноостровский Пр., 64 <br>
-                        Телефон: +7 (812) 648-01-67, +7 (812) 648-01-68
-                    </span>
+            <div class="flex w-full xl:justify-center">
+                <div class="flex flex-col w-full px-5 mt-40 space-y-4 md:space-y-0 xl:w-3/5 md:flex-row">
+                    <div class="flex flex-1">
+                        <span class="text-4xl font-medium ">Контакты</span>
+                    </div>
+                    <div class="flex flex-col flex-1 space-y-4 text-sm sm:text-base">
+                        <span class="text-lg font-medium">Главный Офис Emi</span>
+                        <span class="">Адрес: <br>
+                            119180, Москва, 4-Й Голутвинский Переулок, Д. 1/8, Стр. 1-2 <br>
+                            Телефон: <br>
+                            +7 (495) 258 31 91
+                        </span>
+                        <span class="">Контакт Для Прессы: <a href="mailto:Pr_russia@loreal.com" class="text-blue-400 hover:underline">Pr_russia@loreal.com</a></span>
+                        <span class="">Контакт Для Потенциальных Поставщиков: <br>
+                        <a href="mailto:CORPRU.PurchasingRussia@loreal.com" class="text-blue-400 hover:underline">CORPRU.PurchasingRussia@loreal.com</a></span>
+                        <span class="">Вопросы По Трудоустройству И Карьере: <br>
+                            ВКонтакте Loreal_talent <br>
+                            Facebook LorealRussia
+                        </span>    
+                        <span class="">Остальные Вопросы <br>
+                            <a href="mailto:Loreal.Russia@loreal.com" class="text-blue-400 hover:underline">Loreal.Russia@loreal.com</a>
+                        </span>    
+                        <span class="font-medium">Завод L'ORÉAL</span>
+                        <span>Адрес: <br>
+                            249020, Калужская Область, Боровский Район, Деревня Добрино, 2-Ой Восточный Проезд, Владение 4 <br>
+                            Телефон: +7 (495) 258 31 91   
+                        </span>
+                        <span class="font-medium">Обучающий Центр для парикмахеров, визажистов, медицинских сотрудников  «Академия L'ORÉAL» В Москве</span>
+                        <span>Адрес: <br>
+                            119049, Москва, Якиманский Переулок, 6 <br>
+                            Телефон: +7 (495) 258 31 32 
+                        </span>
+                        <span class="font-medium">Обучающий Центр «Академия L'ORÉAL» В Санкт-Петербурге</span>
+                        <span>Адрес: <br>
+                            197022, Санкт-Петербург, Каменноостровский Пр., 64 <br>
+                            Телефон: +7 (812) 648-01-67, +7 (812) 648-01-68
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
