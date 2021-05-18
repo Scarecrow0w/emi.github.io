@@ -30,82 +30,124 @@
                 </ul>
             </div>
         </nav> -->
-        <nav class="flex flex-col items-center justify-between w-full bg-white border-b border-gray-500 lg:min-h-24 lg:bg-transparent ">
-            <div class="flex flex-row flex-no-wrap items-center self-start justify-between w-full h-10 border lg:self-center lg:flex-none">
-                <ul class="flex space-x-3">
-                    <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
-                    <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
-                    <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
-                </ul>
-                <a href="#" class="h-full">
-                    <img src="https://emi-school.ru/local/templates/emischool/favicon.ico" alt="logo" class="h-full">
-                </a>
-                <div class="flex space-x-3">
-                    <select name="languageSelector" id="languageSelector" class="text-white bg-transparent focus:outline-none ">
+        <nav class="flex flex-col items-center justify-between w-full bg-white border-b border-gray-500 lg:bg-transparent ">
+            <div class="flex flex-row flex-no-wrap items-center self-start justify-between w-full h-16 border lg:self-center lg:flex-none">
+                <div class="flex items-center flex-1 pl-3">
+                    <ul class="hidden space-x-3 lg:flex">
+                        <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
+                        <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
+                        <li><a href="#" class="hover:text-pink-300 lg:text-white">Link</a></li>
+                    </ul>
+                    <button id="menuBtn" class="flex items-center justify-center hamburger lg:hidden focus:outline-none" type="button" onclick="navToggle()">
+                        <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
+                    </button>
+                </div>
+                <div class="flex justify-center flex-1 ">
+                    <a href="#" class="">
+                        <img src="img/logo.png" alt="logo" class="h-8">
+                    </a>
+                </div>
+                <div class="flex justify-end flex-1 pr-3 space-x-3 ">
+                    <select name="languageSelector" id="languageSelector" class="hidden bg-transparent cursor-pointer lg:text-white focus:outline-none lg:flex">
                         <option value="rus">Rus</option>
                         <option value="eng">Eng</option>
                     </select>
                     <a href="#" class="hover:text-pink-300 lg:text-white">
                         <i class="fas fa-search"></i>
                     </a>
-                </div>
-              <button id="menuBtn" class="block hamburger lg:hidden focus:outline-none" type="button" onclick="navToggle()">
-                <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
-              </button>
-            </div>
-            <div id="menu" class="flex-col items-center justify-center flex-1 hidden w-full border border-red-500 lg:flex">
-                <ul class="flex justify-between w-1/2 text-lg">
-                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
-                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
-                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
-                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
-                    <li class="cursor-pointer"><a class="hover:text-pink-300 lg:text-white nav-link" href="#">Link</a></li>
-                </ul>  
-                <div class="flex-col hidden w-full bg-white border border-yellow-400 h-96 lg:px-32 submenu">
-                    <div class="flex">
-                        <a href="" class="text-4xl link-title hover:text-pink-300">link title ></a>
-                    </div>
-                    <div class="flex w-full h-full space-x-10 border">
-                        <div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
-                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
-                            <hr class="w-full ">
-                            <ul class="flex flex-col space-y-2 text-2xl">
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
-                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
-                            <hr class="w-full ">
-                            <ul class="flex flex-col space-y-2 text-2xl">
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                            </ul>
-                        </div><div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
-                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
-                            <hr class="w-full ">
-                            <ul class="flex flex-col space-y-2 text-2xl">
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                            </ul>
-                        </div><div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
-                            <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
-                            <hr class="w-full ">
-                            <ul class="flex flex-col space-y-2 text-2xl">
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                                <li><a href="" class="hover:text-pink-300">Link</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>              
+            </div>
+            <div id="menu" class="absolute z-50 flex flex-col w-full px-2 bg-white border border-red-500 lg:px-0 lg:bg-transparent lg:static top-16 lg:items-center lg:justify-center">
+                <div class="flex-col hidden h-full lg:items-center lg:justify-center">
+                    <ul class="flex flex-col justify-between w-4/5 text-2xl lg:text-lg lg:items-center lg:flex-row lg:w-1/2 main-links">
+                        <li class="flex items-center h-20 border-b cursor-pointer ">
+                            <a class="hidden lg:text-white nav-link lg:inline" href="#"></a>
+                            <span class="nav-title lg:hidden hover:text-pink-300"></span>
+                        </li>
+                        <li class="flex items-center h-20 border-b cursor-pointer ">
+                            <a class="hidden lg:text-white nav-link lg:inline" href="#"></a>
+                            <span class="nav-title lg:hidden hover:text-pink-300"></span>
+                        </li>
+                        <li class="flex items-center h-20 border-b cursor-pointer ">
+                            <a class="hidden lg:text-white nav-link lg:inline" href="#"></a>
+                            <span class="nav-title lg:hidden hover:text-pink-300"></span>
+                        </li>
+                        <li class="flex items-center h-20 border-b cursor-pointer ">
+                            <a class="hidden lg:text-white nav-link lg:inline" href="#"></a>
+                            <span class="nav-title lg:hidden hover:text-pink-300"></span>
+                        </li>
+                        <li class="flex items-center h-20 border-b cursor-pointer ">
+                            <a class="hidden lg:text-white nav-link lg:inline" href="#"></a>
+                            <span class="nav-title lg:hidden hover:text-pink-300"></span>
+                        </li>
+                    </ul>  
+                    <div class="flex-col hidden w-full bg-white border border-yellow-400 lg:h-96 lg:px-32 submenu">
+                        <div class="flex">
+                            <a href="" class="text-4xl link-title hover:text-pink-300">link title ></a>
+                        </div>
+                        <div class="flex w-full h-full space-x-10 border">
+                            <div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                                <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                                <hr class="w-full ">
+                                <ul class="flex flex-col space-y-2 text-2xl">
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                                <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                                <hr class="w-full ">
+                                <ul class="flex flex-col space-y-2 text-2xl">
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                </ul>
+                            </div><div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                                <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                                <hr class="w-full ">
+                                <ul class="flex flex-col space-y-2 text-2xl">
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                </ul>
+                            </div><div class="flex flex-col justify-around w-1/4 mt-12 border border-black">
+                                <a href="" class="text-4xl hover:text-pink-300">Link list title ></a>
+                                <hr class="w-full ">
+                                <ul class="flex flex-col space-y-2 text-2xl">
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                    <li><a href="" class="hover:text-pink-300">Link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="flex items-center justify-around mt-auto border-t lg:space-x-3 lg:hidden">
+                        <li><a href="#" class="text-xl hover:text-pink-300 lg:text-white lg:text-base ">Link</a></li>
+                        <li><a href="#" class="text-xl hover:text-pink-300 lg:text-white lg:text-base ">Link</a></li>
+                        <li><a href="#" class="text-xl hover:text-pink-300 lg:text-white lg:text-base ">Link</a></li>
+                        <li>
+                            <select name="languageSelector" id="languageSelector" class="flex bg-transparent cursor-pointer lg:hidden lg:text-white focus:outline-none">
+                            <option value="rus">Rus</option>
+                            <option value="eng">Eng</option>
+                        </select></li>
+                    </ul>
+                </div>      
+                <div class="flex flex-col">
+                    <span class="mt-3 text-gray-300 cursor-pointer"><i class="mr-2 fas fa-caret-left"></i>Back</span>
+                    <p class="flex items-center h-20 text-3xl border-b">Title</p>
+                    <a href="" class="flex items-center h-20 text-lg">Link Title</a>
+                    <ul class="flex flex-col mt-5 ml-6 text-xl">
+                        <li class="cursor-pointer h-14 "><span class="">Link</span> <i class="ml-5 fas fa-caret-right"></i></li>
+                        <li class="cursor-pointer h-14 "><span class="">Link</span> <i class="ml-5 fas fa-caret-right"></i></li>
+                        <li class="cursor-pointer h-14 "><span class="">Link</span> <i class="ml-5 fas fa-caret-right"></i></li>
+                        <li class="cursor-pointer h-14 "><span class="">Link</span> <i class="ml-5 fas fa-caret-right"></i></li>
+                    </ul>
+                </div>
             </div>                
         </nav>
         <div class="flex flex-col-reverse items-center justify-center flex-1 text-white 2xl:mb-40 lg:mb-0 2xl:justify-start">

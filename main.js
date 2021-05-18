@@ -592,23 +592,33 @@ console.log(links);
 // linkTitle.textContent = '123'
 
 let navlink = document.querySelectorAll('.nav-link'),
+navtitle = document.querySelectorAll('.nav-title'),
 submenu = document.querySelector('.submenu');
 
-// Показать подменю при наведении курсора на ссылку
-navlink.forEach((el, i) => {
-  
-  el.textContent = links[i].name
-
-
-  el.addEventListener('mouseover', () => {
-    submenu.classList.remove('hidden')
-    submenu.classList.add('flex')
+// Navbar для десктопов
+if (window.innerWidth >= 1024) {
+  // Показать подменю при наведении курсора на ссылку
+  navlink.forEach((el, i) => {
+    
+    el.textContent = links[i].name
+      
+    el.addEventListener('mouseover', () => {
+      submenu.classList.remove('hidden')
+      submenu.classList.add('flex')
+    })    
+    
   })
-})
 
-// Скрыть подменю при mouseleave submenu
-submenu.addEventListener('mouseleave', () => {
-  submenu.classList.remove('flex')
-  submenu.classList.add('hidden')
-})
+  // Скрыть подменю при mouseleave submenu
+  submenu.addEventListener('mouseleave', () => {
+    submenu.classList.remove('flex')
+    submenu.classList.add('hidden')
+  })
+}
 
+// Navbar для узких экранов
+if (window.innerWidth < 1024) {
+  navtitle.forEach((el, i) => {
+    el.textContent = links[i].name
+  })
+}

@@ -11,8 +11,13 @@
 @media screen and (min-width: 1024px) {
     .statistic-container {
         width: 309px !important;
+    }    
+}
+
+@media screen and (max-width: 1023px) {
+    #menu {
+        height: calc(100vh - 64px);
     }
-    
 }
 
 @media screen and (max-width: 640px) {
@@ -20,10 +25,6 @@
         transform: scale(0.8);
     }
     
-}
-
-section {
-    /* border: solid 1px green; */
 }
 
 header {
@@ -51,7 +52,10 @@ nav:hover {
 
 nav:hover * {
     color: #3D3D3D;
+}
 
+#menu, .main-links {
+    min-height: 64px;
 }
 
 .cards-slider {
