@@ -12,11 +12,20 @@
     .statistic-container {
         width: 309px !important;
     }    
+
+    nav:hover * {
+        color: #3D3D3D;
+    }
 }
 
 @media screen and (max-width: 1023px) {
     #menu {
         height: calc(100vh - 64px);
+    }    
+
+    #menu, .main-menu, .mobile-submenu, .mobile-submenu-links-container {
+        transition: all 0.25s;
+
     }
 }
 
@@ -37,12 +46,12 @@ nav {
     transition: all ease 0.25s;
 }
 
-nav.fixed {
+.navfixed {
     background: white !important;
     z-index: 999;
 }
 
-nav.fixed a, nav a {
+.navfixed a, nav a {
     color: #3D3D3D;
 }
 
@@ -50,8 +59,10 @@ nav:hover {
     background-color: white;
 }
 
-nav:hover * {
-    color: #3D3D3D;
+
+
+.back-to-main-menu, .back-to-mobile-submenu  {
+    color: rgb(219, 205, 205) !important;
 }
 
 #menu, .main-links {

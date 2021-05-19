@@ -38,24 +38,6 @@ searchField.oninput = () => {
   searchField.value ? clearButton.style.display = 'flex' : clearButton.style.display = 'none'
 }
 
-
-window.addEventListener('scroll', () => {
-  let navbar = document.querySelector('nav')
-
-  navbar.classList.toggle('fixed', window.scrollY > 0)
-})
-
-// функция Hamburger Menu
-function navToggle() {
-  let btn = document.getElementById('menuBtn'),
-  nav = document.getElementById('menu');
-
-  btn.classList.toggle('open');
-  nav.classList.toggle('flex');
-  nav.classList.toggle('hidden');
-}
-
-
 const links = [
   
     {
@@ -591,14 +573,37 @@ console.log(links);
 
 // linkTitle.textContent = '123'
 
-let navlink = document.querySelectorAll('.nav-link'),
-navtitle = document.querySelectorAll('.nav-title'),
-submenu = document.querySelector('.submenu');
+let navlinks = document.querySelectorAll('.nav-link'),
+navtitles = document.querySelectorAll('.nav-title'),
+submenu = document.querySelector('.submenu'),
+mainMenu = document.querySelector('.main-menu'),
+mobileSubMenuDiv = document.querySelector('.mobile-submenu'),
+mobileSubMenuLinksDiv = document.querySelector('.mobile-submenu-links-container'),
+mobileSubMenuTitles = document.querySelectorAll('.mobile-submenu-titles'),
+backToMainMenu = document.querySelector('.back-to-main-menu'),
+backToMobileSubmenu = document.querySelector('.back-to-mobile-submenu');
 
 // Navbar для десктопов
 if (window.innerWidth >= 1024) {
+  // зафиксировать Navbar по скроллу
+  window.addEventListener('scroll', () => {
+    let navbar = document.querySelector('nav')
+
+    if (window.scrollY > 0) {
+      navbar.classList.remove('lg:static')
+      navbar.classList.add('fixed')
+      navbar.classList.add('navfixed')
+    } else {
+      navbar.classList.remove('fixed')
+      navbar.classList.remove('navfixed')
+      navbar.classList.add('lg:static')
+    }
+
+    console.log(2);
+  })
+
   // Показать подменю при наведении курсора на ссылку
-  navlink.forEach((el, i) => {
+  navlinks.forEach((el, i) => {
     
     el.textContent = links[i].name
       
@@ -618,7 +623,87 @@ if (window.innerWidth >= 1024) {
 
 // Navbar для узких экранов
 if (window.innerWidth < 1024) {
-  navtitle.forEach((el, i) => {
+  // функция Hamburger Menu
+  function navToggle() {
+    let btn = document.getElementById('menuBtn'),
+    nav = document.getElementById('menu');
+
+    btn.classList.toggle('open')
+    nav.classList.toggle('-left-full')
+    nav.classList.toggle('left-0')
+  }
+
+  navtitles.forEach((el, i) => {
     el.textContent = links[i].name
+
+    el.onclick = () => {
+      mainMenu.classList.remove('flex')
+      mainMenu.classList.add('hidden')
+      mobileSubMenuDiv.classList.remove('hidden')
+      mobileSubMenuDiv.classList.add('flex')      
+      setTimeout(() => {
+        mobileSubMenuDiv.classList.remove('translate-x-full')
+        mobileSubMenuLinksDiv.classList.add('translate-x-full')
+       }, 0)
+      
+    }
+
+    mobileSubMenuTitles.forEach((title, i) => {
+      title.onclick = () => {
+        mobileSubMenuDiv.classList.remove('flex')
+        mobileSubMenuDiv.classList.add('hidden')
+        mobileSubMenuLinksDiv.classList.remove('hidden')
+        mobileSubMenuLinksDiv.classList.add('flex')
+        setTimeout(() => {
+          mobileSubMenuLinksDiv.classList.remove('translate-x-full')
+          mobileSubMenuDiv.classList.add('translate-x-full')
+        }, 0)
+      }
+    })
   })
+
+  backToMainMenu.onclick = () => {    
+    mobileSubMenuDiv.classList.add('translate-x-full')
+
+    setTimeout(() => {
+      mobileSubMenuDiv.classList.remove('flex')
+      mobileSubMenuDiv.classList.add('hidden')
+      mainMenu.classList.remove('hidden')
+      mainMenu.classList.add('flex')
+    }, 250)
+    
+  }
+
+  backToMobileSubmenu.onclick = () => {
+    mobileSubMenuLinksDiv.classList.add('translate-x-full')
+
+    setTimeout(() => {
+      mobileSubMenuLinksDiv.classList.remove('flex')
+      mobileSubMenuLinksDiv.classList.add('hidden')
+      mobileSubMenuDiv.classList.remove('hidden')
+      mobileSubMenuDiv.classList.add('flex')
+      mobileSubMenuDiv.classList.remove('translate-x-full')
+
+    }, 250)
+  }
 }
+
+
+
+
+
+// FadeIn effect
+// function fadeIn(el) {
+//   let op = 0
+//   el.style.opacity = op
+//   el.classList.remove('hidden')
+//   el.classList.add('flex')
+  
+//   let timer = setInterval(function () {
+//     if (op >= 1) {
+//       clearInterval(timer)
+//     }
+//     el.style.opacity = op
+//     op = op + 0.1
+//   }, 30);
+// }
