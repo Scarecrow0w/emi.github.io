@@ -602,18 +602,36 @@ function Navbar() {
     navbar.classList.remove('navfixed')
 
     // Показать подменю при наведении курсора на ссылку
-    navlinks.forEach((el, i) => {
-      
-      el.textContent = links[i].name
-        
-      el.addEventListener('mouseover', () => fadeIn(submenu))    
+    navTitleItems.forEach((el, i) => {
+      el.addEventListener('mouseover', () => {
+        if (submenu.classList.contains('hidden')) fadeIn(submenu)
+      })    
       
     })
 
+    navlinks.forEach((el, i) => el.textContent = links[i].name)
+
     // Скрыть подменю при mouseleave submenu
-    navbar.addEventListener('mouseleave', () => {
+    let mouseOverSubmenu = false
+
+    submenu.addEventListener('mouseover', () => {
+      mouseOverSubmenu = true
+    })
+    submenu.addEventListener('mouseleave', () => {
+      mouseOverSubmenu = false
       submenu.classList.remove('flex')
       submenu.classList.add('hidden')
+    })
+
+    navTitleItems.forEach((el) => {
+      el.addEventListener('mouseleave', () => {
+        setTimeout( () => {
+          if (!mouseOverSubmenu) {
+            submenu.classList.remove('flex')
+            submenu.classList.add('hidden')
+          }
+        }, 0)        
+      })
     })
   }
 
