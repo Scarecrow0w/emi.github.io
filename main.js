@@ -605,15 +605,12 @@ function Navbar() {
       
       el.textContent = links[i].name
         
-      el.addEventListener('mouseover', () => {
-        submenu.classList.remove('hidden')
-        submenu.classList.add('flex')
-      })    
+      el.addEventListener('mouseover', () => fadeIn(submenu))    
       
     })
 
     // Скрыть подменю при mouseleave submenu
-    submenu.addEventListener('mouseleave', () => {
+    navbar.addEventListener('mouseleave', () => {
       submenu.classList.remove('flex')
       submenu.classList.add('hidden')
     })
@@ -694,17 +691,18 @@ function Navbar() {
 
 
 // FadeIn effect
-// function fadeIn(el) {
-//   let op = 0
-//   el.style.opacity = op
-//   el.classList.remove('hidden')
-//   el.classList.add('flex')
+function fadeIn(el) {
+  let op = 0
+  el.style.opacity = op
+  el.classList.remove('hidden')
+  el.classList.add('flex')
   
-//   let timer = setInterval(function () {
-//     if (op >= 1) {
-//       clearInterval(timer)
-//     }
-//     el.style.opacity = op
-//     op = op + 0.1
-//   }, 30);
-// }
+  let timer = setInterval(function () {
+    if (op >= 1) {
+      clearInterval(timer)
+    }
+    el.style.opacity = op
+    op = op + 0.1
+  }, 50);
+}
+

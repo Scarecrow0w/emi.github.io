@@ -13,7 +13,7 @@
         width: 309px !important;
     }    
 
-    nav:hover * {
+    nav:hover a, nav:hover select {
         color: #3D3D3D;
     }
 }
@@ -24,7 +24,7 @@
     }    
 
     #menu, .main-menu, .mobile-submenu, .mobile-submenu-links-container {
-        transition: all 0.25s;
+        transition: all ease 0.25s;
 
     }
 }
@@ -40,6 +40,7 @@ header {
     height: 800px;
     background: url(https://www.loreal.com/-/media/project/loreal/brand-sites/corp/master/lcorp/7-local-country-folder/russia/russie-hero-image-1920x800.jpg?cx=0.17&cy=0.63&cw=1920&ch=800&blr=False&hash=9B1F775B14FF5B2DBF936D013876AC6A) no-repeat center center;
     background-size: cover;
+    transition: all 0.25s;
 }
 
 nav {
