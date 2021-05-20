@@ -48,7 +48,7 @@ nav {
 
 .navfixed {
     background: white !important;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .navfixed a, nav a {

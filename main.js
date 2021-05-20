@@ -22,8 +22,20 @@ cards.forEach((elem)=>{
   }) 
 })
 
+// зафиксировать Navbar по скроллу
+window.addEventListener('scroll', () => {
+  let navbar = document.querySelector('nav')
 
-
+  if (window.scrollY > 0) {
+    navbar.classList.remove('lg:static')
+    navbar.classList.add('fixed')
+    navbar.classList.add('navfixed')
+  } else {
+    navbar.classList.remove('fixed')
+    navbar.classList.remove('navfixed')
+    navbar.classList.add('lg:static')
+  }
+})
 
 // очистить поле поиска и отобразить/показать кнопку Х
 let clearButton = document.querySelector('.clear-field'),
@@ -569,10 +581,6 @@ const links = [
 
 console.log(links);
 
-// let linkTitle = document.querySelector('.link-title')
-
-// linkTitle.textContent = '123'
-
 let navlinks = document.querySelectorAll('.nav-link'),
 navtitles = document.querySelectorAll('.nav-title'),
 submenu = document.querySelector('.submenu'),
@@ -583,108 +591,96 @@ mobileSubMenuTitles = document.querySelectorAll('.mobile-submenu-titles'),
 backToMainMenu = document.querySelector('.back-to-main-menu'),
 backToMobileSubmenu = document.querySelector('.back-to-mobile-submenu');
 
-// Navbar для десктопов
-if (window.innerWidth >= 1024) {
-  // зафиксировать Navbar по скроллу
-  window.addEventListener('scroll', () => {
-    let navbar = document.querySelector('nav')
+Navbar()
+window.addEventListener('resize', Navbar);
 
-    if (window.scrollY > 0) {
-      navbar.classList.remove('lg:static')
-      navbar.classList.add('fixed')
-      navbar.classList.add('navfixed')
-    } else {
-      navbar.classList.remove('fixed')
-      navbar.classList.remove('navfixed')
-      navbar.classList.add('lg:static')
-    }
-
-    console.log(2);
-  })
-
-  // Показать подменю при наведении курсора на ссылку
-  navlinks.forEach((el, i) => {
-    
-    el.textContent = links[i].name
+function Navbar() {
+  // Navbar для десктопов
+  if (window.innerWidth >= 1024) {  
+    // Показать подменю при наведении курсора на ссылку
+    navlinks.forEach((el, i) => {
       
-    el.addEventListener('mouseover', () => {
-      submenu.classList.remove('hidden')
-      submenu.classList.add('flex')
-    })    
-    
-  })
+      el.textContent = links[i].name
+        
+      el.addEventListener('mouseover', () => {
+        submenu.classList.remove('hidden')
+        submenu.classList.add('flex')
+      })    
+      
+    })
 
-  // Скрыть подменю при mouseleave submenu
-  submenu.addEventListener('mouseleave', () => {
-    submenu.classList.remove('flex')
-    submenu.classList.add('hidden')
-  })
-}
+    // Скрыть подменю при mouseleave submenu
+    submenu.addEventListener('mouseleave', () => {
+      submenu.classList.remove('flex')
+      submenu.classList.add('hidden')
+    })
+  }
 
-// Navbar для узких экранов
-if (window.innerWidth < 1024) {
-  // функция Hamburger Menu
-  function navToggle() {
+  // Navbar для узких экранов
+  if (window.innerWidth < 1024) {
+    // функция Hamburger Menu
     let btn = document.getElementById('menuBtn'),
     nav = document.getElementById('menu');
 
-    btn.classList.toggle('open')
-    nav.classList.toggle('-left-full')
-    nav.classList.toggle('left-0')
-  }
+    btn.onclick = () => {
+      btn.classList.toggle('open')
+      nav.classList.toggle('-left-full')
+      nav.classList.toggle('left-0')
+    }
 
-  navtitles.forEach((el, i) => {
-    el.textContent = links[i].name
+    navtitles.forEach((el, i) => {
+      el.textContent = links[i].name
 
-    el.onclick = () => {
-      mainMenu.classList.remove('flex')
-      mainMenu.classList.add('hidden')
-      mobileSubMenuDiv.classList.remove('hidden')
-      mobileSubMenuDiv.classList.add('flex')      
+      el.onclick = () => {
+        mainMenu.classList.remove('flex')
+        mainMenu.classList.add('hidden')
+        mobileSubMenuDiv.classList.remove('hidden')
+        mobileSubMenuDiv.classList.add('flex')      
+        setTimeout(() => {
+          mobileSubMenuDiv.classList.remove('translate-x-full')
+          mobileSubMenuLinksDiv.classList.add('translate-x-full')
+        }, 0)
+        
+      }
+
+      mobileSubMenuTitles.forEach((title, i) => {
+        title.onclick = () => {
+          mobileSubMenuDiv.classList.remove('flex')
+          mobileSubMenuDiv.classList.add('hidden')
+          mobileSubMenuLinksDiv.classList.remove('hidden')
+          mobileSubMenuLinksDiv.classList.add('flex')
+          setTimeout(() => {
+            mobileSubMenuLinksDiv.classList.remove('translate-x-full')
+            mobileSubMenuDiv.classList.add('translate-x-full')
+          }, 0)
+        }
+      })
+    })
+
+    backToMainMenu.onclick = () => {    
+      mobileSubMenuDiv.classList.add('translate-x-full')
+
       setTimeout(() => {
-        mobileSubMenuDiv.classList.remove('translate-x-full')
-        mobileSubMenuLinksDiv.classList.add('translate-x-full')
-       }, 0)
+        mobileSubMenuDiv.classList.remove('flex')
+        mobileSubMenuDiv.classList.add('hidden')
+        mainMenu.classList.remove('hidden')
+        mainMenu.classList.add('flex')
+      }, 250)
       
     }
 
-    mobileSubMenuTitles.forEach((title, i) => {
-      title.onclick = () => {
-        mobileSubMenuDiv.classList.remove('flex')
-        mobileSubMenuDiv.classList.add('hidden')
-        mobileSubMenuLinksDiv.classList.remove('hidden')
-        mobileSubMenuLinksDiv.classList.add('flex')
-        setTimeout(() => {
-          mobileSubMenuLinksDiv.classList.remove('translate-x-full')
-          mobileSubMenuDiv.classList.add('translate-x-full')
-        }, 0)
-      }
-    })
-  })
+    backToMobileSubmenu.onclick = () => {
+      mobileSubMenuLinksDiv.classList.add('translate-x-full')
 
-  backToMainMenu.onclick = () => {    
-    mobileSubMenuDiv.classList.add('translate-x-full')
+      setTimeout(() => {
+        mobileSubMenuLinksDiv.classList.remove('flex')
+        mobileSubMenuLinksDiv.classList.add('hidden')
+        mobileSubMenuDiv.classList.remove('hidden')
+        mobileSubMenuDiv.classList.add('flex')
+        mobileSubMenuDiv.classList.remove('translate-x-full')
 
-    setTimeout(() => {
-      mobileSubMenuDiv.classList.remove('flex')
-      mobileSubMenuDiv.classList.add('hidden')
-      mainMenu.classList.remove('hidden')
-      mainMenu.classList.add('flex')
-    }, 250)
-    
-  }
-
-  backToMobileSubmenu.onclick = () => {
-    mobileSubMenuLinksDiv.classList.add('translate-x-full')
-
-    setTimeout(() => {
-      mobileSubMenuLinksDiv.classList.remove('flex')
-      mobileSubMenuLinksDiv.classList.add('hidden')
-      mobileSubMenuDiv.classList.remove('hidden')
-      mobileSubMenuDiv.classList.add('flex')
-      mobileSubMenuDiv.classList.remove('translate-x-full')
-
-    }, 250)
+      }, 250)
+    }
   }
 }
 
