@@ -583,6 +583,7 @@ console.log(links);
 
 let navlinks = document.querySelectorAll('.nav-link'),
 navtitles = document.querySelectorAll('.nav-title'),
+navTitleItems = document.querySelectorAll('.nav-title-item'),
 submenu = document.querySelector('.submenu'),
 mainMenu = document.querySelector('.main-menu'),
 mobileSubMenuDiv = document.querySelector('.mobile-submenu'),
@@ -630,9 +631,9 @@ function Navbar() {
       nav.classList.toggle('left-0')
     }
 
-    navtitles.forEach((el, i) => {
-      el.textContent = links[i].name
+    navtitles.forEach((el, i) => el.textContent = links[i].name)
 
+    navTitleItems.forEach((el, i) => {
       el.onclick = () => {
         mainMenu.classList.remove('flex')
         mainMenu.classList.add('hidden')
