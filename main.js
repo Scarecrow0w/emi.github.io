@@ -589,14 +589,17 @@ mobileSubMenuDiv = document.querySelector('.mobile-submenu'),
 mobileSubMenuLinksDiv = document.querySelector('.mobile-submenu-links-container'),
 mobileSubMenuTitles = document.querySelectorAll('.mobile-submenu-titles'),
 backToMainMenu = document.querySelector('.back-to-main-menu'),
+navbar = document.querySelector('nav'),
 backToMobileSubmenu = document.querySelector('.back-to-mobile-submenu');
 
 Navbar()
 window.addEventListener('resize', Navbar);
 
-function Navbar() {
+function Navbar() {  
   // Navbar для десктопов
   if (window.innerWidth >= 1024) {  
+    navbar.classList.remove('navfixed')
+
     // Показать подменю при наведении курсора на ссылку
     navlinks.forEach((el, i) => {
       
@@ -618,6 +621,8 @@ function Navbar() {
 
   // Navbar для узких экранов
   if (window.innerWidth < 1024) {
+    navbar.classList.add('navfixed')
+
     // функция Hamburger Menu
     let btn = document.getElementById('menuBtn'),
     nav = document.getElementById('menu');
