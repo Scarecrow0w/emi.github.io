@@ -2,7 +2,7 @@
 const cards = document.querySelectorAll('.card')
 
 cards.forEach((elem)=>{
-  elem.addEventListener('mouseover', () => {
+  elem.addEventListener('mouseenter', () => {
     const parent = elem.parentElement,
     thisCards = parent.querySelectorAll('.card');
     
@@ -594,7 +594,7 @@ navbar = document.querySelector('nav'),
 backToMobileSubmenu = document.querySelector('.back-to-mobile-submenu');
 
 Navbar()
-window.addEventListener('resize', Navbar);
+window.addEventListener('resize', Navbar)
 
 function Navbar() {  
   // Navbar для десктопов
@@ -603,7 +603,7 @@ function Navbar() {
 
     // Показать подменю при наведении курсора на ссылку
     navTitleItems.forEach((el, i) => {
-      el.addEventListener('mouseover', () => {
+      el.addEventListener('mouseenter', () => {
         if (submenu.classList.contains('hidden')) fadeIn(submenu)
       })    
       
@@ -612,13 +612,13 @@ function Navbar() {
     navlinks.forEach((el, i) => el.textContent = links[i].name)
 
     // Скрыть подменю при mouseleave submenu
-    let mouseOverSubmenu = false
+    let mouseenterSubmenu = false
 
-    submenu.addEventListener('mouseover', () => {
-      mouseOverSubmenu = true
+    submenu.addEventListener('mouseenter', () => {
+      mouseenterSubmenu = true
     })
     submenu.addEventListener('mouseleave', () => {
-      mouseOverSubmenu = false
+      mouseenterSubmenu = false
       submenu.classList.remove('flex')
       submenu.classList.add('hidden')
     })
@@ -626,7 +626,7 @@ function Navbar() {
     navTitleItems.forEach((el) => {
       el.addEventListener('mouseleave', () => {
         setTimeout( () => {
-          if (!mouseOverSubmenu) {
+          if (!mouseenterSubmenu) {
             submenu.classList.remove('flex')
             submenu.classList.add('hidden')
           }
